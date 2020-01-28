@@ -1,14 +1,20 @@
-<html>
-<head>
-    <title> Report Template</title>
-</head>
-<body>
+{% extends 'bootstrap/base.html' %}
 
-</body>
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+href="{{url_for('.static', filename='css/styles.css')}}">
+{% endblock %}
+
+{% block title %}
+Report Template
+{% endblock %}
+
+{% block content %}
 <h1>The Report</h1>
-
+<div>
 <p class="content">Organisation: {{ org_name }}</p>
 <p class="content">Reported at: {{ report_at }}</p>
 <p class="content">Created at: {{ created_at }}</p>
-
-</html>
+</div>
+{% endblock %}
