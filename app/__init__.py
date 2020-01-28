@@ -20,5 +20,3 @@ from app import routes
 def create_postgres_conn():
     engine = create_engine('postgresql+psycopg2://interview:uo4uu3AeF3@candidate.suade.org/suade')
     g.conn = engine.connect()
-
-
